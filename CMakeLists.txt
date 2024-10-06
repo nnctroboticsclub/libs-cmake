@@ -16,6 +16,7 @@ install(
     cmake/Findsrobo_base.cmake
     cmake/MbedCE-Toolchain.cmake
     cmake/MbedCE.cmake
+    cmake/TargetDumper.cmake
   DESTINATION share/cmake
 )
 
