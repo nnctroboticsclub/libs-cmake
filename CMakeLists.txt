@@ -17,6 +17,8 @@ install(
     cmake/MbedCE-Toolchain.cmake
     cmake/MbedCE.cmake
     cmake/TargetDumper.cmake
+    cmake/Findfmt.cmake
+    cmake/Findtcb_span.cmake
   DESTINATION share/cmake
 )
 
