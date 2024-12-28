@@ -3,7 +3,7 @@ include(FetchContent)
 FetchContent_Populate(Futaba_Puropo
   GIT_REPOSITORY git@github.com:nnctroboticsclub/Futaba_Puropo.git
   GIT_TAG 2e5d6d59754e0f4622dc85e7a4ccaf80a666e47b
-  SOURCE_DIR ${CMAKE_BINARY_DIR}/3rd-party/Futaba_Puropo/src
+  SOURCE_DIR /usr/arm-none-eabi/src/Futaba_Puropo/src
   BINARY_DIR ${CMAKE_BINARY_DIR}/3rd-party/Futaba_Puropo/build
   SUBBUILD_DIR ${CMAKE_BINARY_DIR}/3rd-party/Futaba_Puropo/subbuild
 )

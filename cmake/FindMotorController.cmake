@@ -3,7 +3,7 @@ include(FetchContent)
 FetchContent_Populate(MotorController
   GIT_REPOSITORY git@github.com:nnctroboticsclub/MotorController.git
   GIT_TAG aba526174f61a2b4e126b0bfa83311e292849e0e
-  SOURCE_DIR ${CMAKE_BINARY_DIR}/3rd-party/MotorController/src
+  SOURCE_DIR /usr/arm-none-eabi/src/MotorController/src
   BINARY_DIR ${CMAKE_BINARY_DIR}/3rd-party/MotorController/build
   SUBBUILD_DIR ${CMAKE_BINARY_DIR}/3rd-party/MotorController/subbuild
 )
