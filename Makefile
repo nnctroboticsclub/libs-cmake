@@ -1,7 +1,7 @@
 build/build.ninja: CMakeLists.txt
 	@mkdir -p build
 	cmake  \
-		-DCMAKE_INSTALL_PREFIX=/usr/arm-none-eabi/local \
+		-DCMAKE_INSTALL_PREFIX=/usr/arm-none-eabi \
 		-S . -B build \
 		-G Ninja
 

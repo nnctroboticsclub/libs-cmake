@@ -3,7 +3,7 @@ include(FetchContent)
 FetchContent_Populate(can_servo
   GIT_REPOSITORY git@github.com:nnctroboticsclub/can_servo.git
   GIT_TAG e68a8af81d92ede8c92f08270f93f54c58aa22ac
-  SOURCE_DIR /usr/arm-none-eabi/src/can_servo/src
+  SOURCE_DIR ${CMAKE_BINARY_DIR}/3rd-party/can_servo/src
   BINARY_DIR ${CMAKE_BINARY_DIR}/3rd-party/can_servo/build
   SUBBUILD_DIR ${CMAKE_BINARY_DIR}/3rd-party/can_servo/subbuild
 )

@@ -3,7 +3,7 @@ include(FetchContent)
 FetchContent_Populate(ikakoMDC
   GIT_REPOSITORY git@github.com:nnctroboticsclub/ikakoMDC.git
   GIT_TAG 156c6f30ca7d5d96542bae1edf4bad3487494c7a
-  SOURCE_DIR /usr/arm-none-eabi/src/ikakoMDC/src
+  SOURCE_DIR ${CMAKE_BINARY_DIR}/3rd-party/ikakoMDC/src
   BINARY_DIR ${CMAKE_BINARY_DIR}/3rd-party/ikakoMDC/build
   SUBBUILD_DIR ${CMAKE_BINARY_DIR}/3rd-party/ikakoMDC/subbuild
 )

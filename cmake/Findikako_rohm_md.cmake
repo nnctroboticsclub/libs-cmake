@@ -3,7 +3,7 @@ include(FetchContent)
 FetchContent_Populate(ikako_rohm_md
   GIT_REPOSITORY git@github.com:nnctroboticsclub/ikako_rohm_md.git
   GIT_TAG a39a09aa3014ed3c19aa81cfdbb309d3503aa98b
-  SOURCE_DIR /usr/arm-none-eabi/src/ikako_rohm_md/src
+  SOURCE_DIR ${CMAKE_BINARY_DIR}/3rd-party/ikako_rohm_md/src
   BINARY_DIR ${CMAKE_BINARY_DIR}/3rd-party/ikako_rohm_md/build
   SUBBUILD_DIR ${CMAKE_BINARY_DIR}/3rd-party/ikako_rohm_md/subbuild
 )
