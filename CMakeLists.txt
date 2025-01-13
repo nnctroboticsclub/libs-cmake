@@ -20,6 +20,8 @@ install(
     cmake/Findtcb_span.cmake
     cmake/TargetDumper.cmake
     cmake/DependencyFinder.cmake
+    cmake/GccArmToolchain.cmake
+    cmake/TargetTransformer.cmake
   DESTINATION share/cmake
 )
 
