@@ -1,7 +1,7 @@
 include(FetchContent)
 
 FetchContent_Populate(mbed-ce
-  GIT_REPOSITORY git@github.com:mbed-ce/mbed-os.git
+  GIT_REPOSITORY https://github.com/mbed-ce/mbed-os.git
   GIT_SHALLOW 1
   SOURCE_DIR /usr/arm-none-eabi/src/mbed-ce/src
   BINARY_DIR ${CMAKE_BINARY_DIR}/3rd-party/mbed-ce/build
