@@ -22,6 +22,7 @@ install(
     cmake/DependencyFinder.cmake
     cmake/GccArmToolchain.cmake
     cmake/TargetTransformer.cmake
+    cmake/Findcereal.cmake
   DESTINATION share/cmake
 )
 
