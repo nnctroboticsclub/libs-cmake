@@ -8,7 +8,7 @@
       pkgs = import nixpkgs { inherit system; };
     in
     {
-      packages.${system} = {
+      packages.${system} = rec {
         libs-cmake = pkgs.stdenv.mkDerivation {
           pname = "libs-cmake";
           version = "0.1.0";
@@ -29,6 +29,29 @@
 
           installPhase = ''
             cp -r . $out
+          '';
+        };
+        mbed-os = pkgs.stdenv.mkDerivation {
+          pname = "mbed-os";
+          version = "0.1.0";
+
+          src = ./mbed-os;
+
+          installPhase = ''
+            mkdir -p $out/lib/cmake
+
+            cp MbedCE-Toolchain.cmake $out/lib/cmake
+            cp MbedCE.cmake $out/lib/cmake
+
+            cat <<EOF > $out/lib/cmake/FindMbedOS.cmake
+            set(mbed-os_SOURCE_DIR ${mbed-os-src})
+
+            include(FindPackageHandleStandardArgs)
+            find_package_handle_standard_args(mbed-os
+              REQUIRED_VARS
+                mbed-os_SOURCE_DIR
+            )
+            EOF
           '';
         };
       };
