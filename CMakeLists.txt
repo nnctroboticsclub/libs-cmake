@@ -20,9 +20,6 @@ install(
     cmake-libs/Findtcb_span.cmake
     cmake-libs/Findcan_servo.cmake
     cmake-libs/Findim920_rs.cmake
-    cmake-libs/MbedCE-Toolchain.cmake
     cmake-libs/Findcereal.cmake
-    cmake-libs/Findmbed-ce.cmake
-    cmake-libs/MbedCE.cmake
   DESTINATION lib/cmake
 )
