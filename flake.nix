@@ -8,13 +8,29 @@
       pkgs = import nixpkgs { inherit system; };
     in
     {
-      packages.${system}.default = pkgs.stdenv.mkDerivation {
-        pname = "libs-cmake";
-        version = "0.1.0";
+      packages.${system} = rec {
+        libs-cmake = pkgs.stdenv.mkDerivation {
+          pname = "libs-cmake";
+          version = "0.1.0";
 
-        src = ./.;
+          src = ./.;
 
-        nativeBuildInputs = [ pkgs.cmake ];
+          nativeBuildInputs = [ pkgs.cmake ];
+        };
+        mbed-os-src = pkgs.stdenv.mkDerivation {
+          pname = "mbed-os-src";
+          version = "0.1.0";
+
+          src = builtins.fetchGit {
+            url = "https://github.com/mbed-ce/mbed-os.git";
+            ref = "master";
+            rev = "17dc3dc2e6e2817a8bd3df62f38583319f0e4fed";
+          };
+
+          installPhase = ''
+            cp -r . $out
+          '';
+        };
       };
     };
 }
