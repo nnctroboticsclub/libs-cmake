@@ -3,26 +3,26 @@ project(libs-cmake)
 
 install(
   FILES
-    cmake/Findcan_servo.cmake
-    cmake/FindFutaba_Puropo.cmake
-    cmake/Findikako_rohm_md.cmake
-    cmake/FindikakoMDC.cmake
-    cmake/FindIkakoRobomas.cmake
-    cmake/FindikarashiCAN_mk2.cmake
-    cmake/Findim920_rs.cmake
-    cmake/Findmbed-ce.cmake
-    cmake/FindMotorController.cmake
-    cmake/FindPS4_RX.cmake
-    cmake/Findsrobo_base.cmake
-    cmake/MbedCE-Toolchain.cmake
-    cmake/MbedCE.cmake
-    cmake/Findfmt.cmake
-    cmake/Findtcb_span.cmake
     cmake/TargetDumper.cmake
     cmake/DependencyFinder.cmake
     cmake/GccArmToolchain.cmake
     cmake/TargetTransformer.cmake
-    cmake/Findcereal.cmake
-  DESTINATION share/cmake
+  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake
 )
 
+install(
+  FILES
+    cmake-libs/FindFutaba_Puropo.cmake
+    cmake-libs/Findfmt.cmake
+    cmake-libs/Findsrobo_base.cmake
+    cmake-libs/FindPS4_RX.cmake
+    cmake-libs/Findikako_rohm_md.cmake
+    cmake-libs/Findtcb_span.cmake
+    cmake-libs/Findcan_servo.cmake
+    cmake-libs/Findim920_rs.cmake
+    cmake-libs/MbedCE-Toolchain.cmake
+    cmake-libs/Findcereal.cmake
+    cmake-libs/Findmbed-ce.cmake
+    cmake-libs/MbedCE.cmake
+  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake
+)
