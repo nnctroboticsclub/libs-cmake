@@ -7,7 +7,7 @@ install(
     cmake/DependencyFinder.cmake
     cmake/GccArmToolchain.cmake
     cmake/TargetTransformer.cmake
-  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake
+  DESTINATION ${CMAKE_INSTALL_LIBDIR}/lib/cmake
 )
 
 install(
@@ -24,5 +24,5 @@ install(
     cmake-libs/Findcereal.cmake
     cmake-libs/Findmbed-ce.cmake
     cmake-libs/MbedCE.cmake
-  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake
+  DESTINATION ${CMAKE_INSTALL_LIBDIR}/lib/cmake
 )

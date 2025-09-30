@@ -8,7 +8,7 @@
       pkgs = import nixpkgs { inherit system; };
     in
     {
-      packages.${system} = rec {
+      packages.${system} = {
         libs-cmake = pkgs.stdenv.mkDerivation {
           pname = "libs-cmake";
           version = "0.1.0";
