@@ -5,7 +5,6 @@ install(
   FILES
     cmake/TargetDumper.cmake
     cmake/DependencyFinder.cmake
-    cmake/GccArmToolchain.cmake
     cmake/TargetTransformer.cmake
   DESTINATION lib/cmake
 )
