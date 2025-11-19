@@ -9,9 +9,9 @@
     in
     {
       packages.${system} = {
-        libs-cmake =
+        cmake-libs =
           pkgs.stdenv.mkDerivation {
-            pname = "libs-cmake";
+            pname = "cmake-libs";
             version = "0.1.0";
 
             src = ./.;
